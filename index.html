@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quotation Management System</title>
+  <title2>EARTHONE TECHNOLOGY</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .add-form {
+      display: none;
+      margin-bottom: 20px;
+    }
+  </style>
+  <script>
+    function toggleAddForm() {
+      var addForm = document.getElementById('add-form');
+      var addFormButton = document.getElementById('add-button');
+      if (addForm.style.display === 'none') {
+        addForm.style.display = 'block';
+        addFormButton.textContent = 'Cancel';
+      } else {
+        addForm.style.display = 'none';
+        addFormButton.textContent = 'Add';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Quotation Management System</h1>
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Search...">
+    <button id="add-button" onclick="toggleAddForm()">Add</button>   
+  </div>
+
+  <div class="add-form" id="add-form">
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="status">Status:</label>
+      <input type="text" id="status" name="status" required><br><br>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required><br><br>
+
+      <label for="file">File:</label>
+      <input type="file" id="file" name="file" required><br><br>
+
+      <label for="quotation-number">Quotation Number:</label>
+      <input type="text" id="quotation-number" name="quotation-number" required><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <h2>Quotations</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Serial No</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>File</th>
+        <th>Quotation No</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Brad Pitt</td>
+        <td>Approved</td>
+        <td>07-15-2023</td>
+        <td>Sample.pdf</td>
+        <td>Q-001</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Tom Cruise</td>
+        <td>Pending</td>
+        <td>07-16-2023</td>
+        <td>Document.doc</td>
+        <td>Q-002</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Bradly Cooper</td>
+        <td>Pending</td>
+        <td>07-17-2023</td>
+        <td>File.doc</td>
+        <td>Q-003</td>
+      <tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
